@@ -44,17 +44,21 @@ void main() {
   }
 
   void getOperacao() {
-    print("Digite uma operação (+, -, /, *):");
+    print("Digite uma operação ${operacocoes.toString()}");
     entrada = stdin.readLineSync();
     if (entrada != null) {
       if (operacocoes.contains(entrada)) {
         operacao = entrada!;
+      } else {
+        print("Operação invalida.");
+        getOperacao();
       }
     }
   }
 
   print("Digite o primeiro número:");
 
+  entrada = stdin.readLineSync();
   if (entrada != null) {
     if (entrada != "") {
       numeroUm = double.parse(entrada!);
