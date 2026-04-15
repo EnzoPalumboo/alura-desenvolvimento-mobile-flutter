@@ -17,12 +17,47 @@ void main() {
     print(numeroUm / numeroDois);
   }
 
+  void multiplacacao() {
+    print(numeroUm * numeroDois);
+  }
+
+  void calcular() {
+    switch (operacao) {
+      case "+":
+        soma();
+        break;
+
+      case "-":
+        subtracao();
+        break;
+
+      case "/":
+        divisao();
+        break;
+
+      case "*":
+        multiplacacao();
+        break;
+    }
+  }
+
+  print("Digite o primeiro número:");
+
   String? entrada = stdin.readLineSync();
   if (entrada != null) {
     if (entrada != "") {
       numeroUm = double.parse(entrada);
     }
   }
+
+  print("Digite a operação (+, -, /, *):");
+
+  entrada = stdin.readLineSync();
+  if (entrada != null) {
+    operacao = entrada;
+  }
+
+  print("Digite o segundo número:");
 
   entrada = stdin.readLineSync();
   if (entrada != null) {
@@ -31,28 +66,7 @@ void main() {
     }
   }
 
-  entrada = stdin.readLineSync();
-  if (entrada != null) {
-    operacao = entrada;
-  }
+  print("O resultado é:");
 
-
-  void multiplacacao() {
-    print(numeroUm * numeroDois);
-  }
-
-  switch (operacao) {
-    case "+":
-      soma();
-      break;
-    case "-":
-      subtracao();
-      break;
-    case "/":
-      divisao();
-      break;
-    case "*":
-      multiplacacao();
-      break;
-  }
+  calcular();
 }
