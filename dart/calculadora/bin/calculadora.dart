@@ -54,7 +54,7 @@ void main() {
         getOperacao();
       }
     }
-  }
+  } 
 
   print("Digite o primeiro número:");
 
