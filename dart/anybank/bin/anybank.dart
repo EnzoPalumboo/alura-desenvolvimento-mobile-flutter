@@ -12,6 +12,16 @@ void main() {
   contaRoberta.saldo = 5000;
 
   print(contaRoberta.saldo);
+
+  contaMatheus.receber(500);
+
+  print(contaMatheus.titular);
+  print(contaMatheus.saldo);
+
+  contaMatheus.enviar(200);
+
+  print(contaMatheus.titular);
+  print(contaMatheus.saldo);
 }
 
 class Conta {
@@ -19,4 +29,14 @@ class Conta {
   double saldo;
 
   Conta(this.titular, this.saldo);
+
+  // Receber dinheiro
+  void receber(double valor) {
+    saldo += valor;
+  }
+
+  // Enviar dinheiro
+  void enviar(double valor) {
+    saldo -= valor;
+  }
 }
