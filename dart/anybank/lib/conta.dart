@@ -22,3 +22,11 @@ class Conta {
     print("O saldo atual de $titular, é de R\$$_saldo");
   }
 }
+
+class ContaCorrente extends Conta {
+  ContaCorrente(super.titular, super._saldo);
+}
+
+class ContaPoupanca extends Conta {
+  ContaPoupanca(super.titular, super._saldo);
+}
