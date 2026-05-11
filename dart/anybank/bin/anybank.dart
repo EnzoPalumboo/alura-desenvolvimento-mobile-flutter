@@ -12,12 +12,11 @@ void main() {
     conta.imprimeSaldo();
   }
 
-  contaRoberta.receber(3000);
   contaMatheus.receber(500);
   contaMatheus.enviar(200);
 
   contaChris.imprimeSaldo();
-  contaChris.receber(100);
+  contaChris.receber(4300);
 
   contaDenise.imprimeSaldo();
   contaDenise.enviar(300);
